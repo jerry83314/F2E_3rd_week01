@@ -10,6 +10,9 @@ import axios from 'axios'
 import VueAxios from 'vue-axios'
 // jQuery
 import $ from 'jquery'
+// Bootstrap
+import 'bootstrap'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 // 掛載 jQuery
 window.$ = $
