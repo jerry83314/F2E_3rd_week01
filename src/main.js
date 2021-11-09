@@ -8,6 +8,11 @@ import 'element-ui/lib/theme-chalk/index.css'
 // Vue axios
 import axios from 'axios'
 import VueAxios from 'vue-axios'
+// jQuery
+import $ from 'jquery'
+
+// 掛載 jQuery
+window.$ = $
 
 Vue.use(ElementUI)
 Vue.use(VueAxios, axios)
