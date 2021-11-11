@@ -1,0 +1,30 @@
+$pink: #FF1D6C;
+$yellow: #FFB72C;
+$green: #007350;
+
+.text-pink {
+  color: $pink;
+}
+.text-yellow {
+  color: $yellow;
+}
+.text-green {
+  color: $green;
+}
+
+.navbar {
+  padding: 20px 110px;
+}
+.jumbotron-wrap {
+  width: 100%;
+  height: 540px;
+  padding: 20px 30px;
+}
+.jumbotron-img {
+  background-image: url('~@/assets/images/jumbotron01.png');
+  background-size: cover;
+  background-position: center;
+}
+.jumbotron-text {
+  max-width: 490px;
+}
