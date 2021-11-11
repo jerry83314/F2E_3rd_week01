@@ -1,10 +1,11 @@
 <template>
   <div>
-    <nav class="navbar d-flex justify-content-between align-items-end">
+    <!-- pc start -->
+    <div class="myNavbar d-none d-sm-flex justify-content-between align-items-end">
       <router-link to="/" class="d-block">
         <img src="../assets/images/logo.png" alt />
       </router-link>
-      <div class="navbar-menu d-flex">
+      <div class="myNavbar-menu d-flex">
         <router-link to class="d-flex align-items-center text-pink me-4">
           <img src="../assets/images/navbar01.png" alt />
           <span class="d-block ms-2">台灣景點</span>
@@ -18,8 +19,8 @@
           <span class="d-block ms-2">景點交通</span>
         </router-link>
       </div>
-    </nav>
-    <div class="jumbotron-wrap">
+    </div>
+    <div class="jumbotron-wrap d-none d-sm-block">
       <div class="jumbotron-img h-100 d-flex justify-content-center align-items-center">
         <div class="jumbotron-text">
           <img src="../assets/images/title.svg" alt />
@@ -50,6 +51,40 @@
         </div>
       </div>
     </div>
+    <!-- pc end -->
+    <!-- mobile start -->
+    <div class="container d-sm-none">
+      <div class="myNavbar d-block text-center">
+        <router-link to="/" class="d-block">
+          <img src="../assets/images/logo.png" alt />
+        </router-link>
+      </div>
+      <div class="myNavbar-menu d-flex justify-content-between">
+        <router-link to class="d-block">台灣景點</router-link>
+        <router-link to class="d-block">美食住宿</router-link>
+        <router-link to class="d-block">景點交通</router-link>
+      </div>
+      <span class="d-flex">
+        <el-select v-model="value" clearable placeholder="類別" class="me-1">
+          <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value"
+          ></el-option>
+        </el-select>
+        <el-select v-model="value" clearable placeholder="縣市" class="ms-1">
+          <el-option
+            v-for="item in options"
+            :key="item.value"
+            :label="item.label"
+            :value="item.value"
+          ></el-option>
+        </el-select>
+        <img src="../assets/images/navbar04.svg" alt />
+      </span>
+    </div>
+    <!-- mobile end -->
   </div>
 </template>
 
@@ -88,4 +123,7 @@ export default {
 
 <style lang="scss">
 @import "../assets/scss/main.scss";
+.container {
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .3);
+}
 </style>

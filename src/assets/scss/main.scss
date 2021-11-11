@@ -1,6 +1,7 @@
 $pink: #FF1D6C;
 $yellow: #FFB72C;
 $green: #007350;
+$gray: #ACACAC;
 
 // utils style start
 .text-pink {
@@ -15,8 +16,11 @@ $green: #007350;
 // utils style end
 
 // header style start
-.navbar {
+.myNavbar {
   padding: 20px 110px;
+  @media (max-width: 576px) {
+    padding: 15px;
+  }
 }
 .jumbotron-wrap {
   width: 100%;
@@ -32,15 +36,30 @@ $green: #007350;
 .jumbotron-text {
   max-width: 490px;
 }
+@media (max-width: 576px) {
+  .myNavbar-menu {
+    background-color: #fff;
+    border-radius: 6px;
+    box-shadow: 0 2px 4px rgba(#0D0B0C, .2);
+    padding: 10px 10%;
+    line-height: 21px;
+    font-size: 14px;
+    margin-bottom: 15px;
+    a {
+      color: $gray;
+      text-decoration: none;
+    }
+  }
+}
 // header style end
 
 // footer style start
 .footer-wrap {
-  color: #ACACAC;
+  color: $gray;
   font-size: 12px;
   line-height: 14px;
   padding: 25px;
-  @media (max-width: 525px) {
+  @media (max-width: 576px) {
     padding: 10px;
   }
 }
