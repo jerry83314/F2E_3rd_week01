@@ -2,6 +2,7 @@ $pink: #FF1D6C;
 $yellow: #FFB72C;
 $green: #007350;
 
+// utils style start
 .text-pink {
   color: $pink;
 }
@@ -11,7 +12,9 @@ $green: #007350;
 .text-green {
   color: $green;
 }
+// utils style end
 
+// header style start
 .navbar {
   padding: 20px 110px;
 }
@@ -29,10 +32,16 @@ $green: #007350;
 .jumbotron-text {
   max-width: 490px;
 }
+// header style end
 
+// footer style start
 .footer-wrap {
   color: #ACACAC;
   font-size: 12px;
   line-height: 14px;
   padding: 25px;
+  @media (max-width: 525px) {
+    padding: 10px;
+  }
 }
+// footer style end
